@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Vote for cheese</title>
+  <meta name="description" content="Vote for cheese">
+  <link rel="stylesheet" href="./votes.css" />
+  <script src="./votes.js"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E98GC433MX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-E98GC433MX');
+
+  // set cookie that says they already cast vote.
+  // only cast new vote if no cookie exists.
+  </script>
+</head>
+
+<body>
+  <div id="presubmit">
+    <p>Enter your contact info to finalize your vote:</p>
+
+    <input id="pizza" type="hidden" />
+    <p style="width: 300px; text-align: right;">name:<input id="contact" type="text" /><br />
+      email/phone:<input id="contact" type="text" /></p>
+    <button type="button" onclick="vote()" class="vote-btn">I'm coming! Save me some cheese pizza!</button>
+  </div>
+  <div id="submitting" class="hidden">
+    <div id="loader"></div>
+    casting vote...
+  </div>
+  <div id="postsubmit" class="hidden">
+    <h1>✅ UR VOTE HAZ BEN CAST</h1>
+    <img src="../images/cheese.gif" />
+  </div>
+</body>
+
+</html>
